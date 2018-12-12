@@ -1,28 +1,77 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { ThemeProvider } from 'styled-components';
+import styledTheme from '../src/styles/styled-theme';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+// import IntlWrapper from './Intl/IntlWrapper'
+import { ParallaxProvider } from 'react-scroll-parallax'
+
+import Header from './sections/Header'
+import Subheader from './sections/Subheader'
+import Countries from './sections/Countries'
+import Experience from './sections/Experience'
+import About from './sections/About'
+// import Sentence from './components/Sentence'
+// import Social from './components/Social'
+// import LinksGalery from './components/LinksGalery'
+
+// import SecondSentence from './components/SecondSentence'
+// import Galery from './components/Galery'
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+import './styles/core.css'
+
+const App = props => {
+  return (
+    <ThemeProvider theme={styledTheme}>
+      <ParallaxProvider>
+        <Header headerData={props.intl.messages.header} intl={props.intl} />
+        <Subheader subheaderData={props.intl.messages.subheader} />
+        <Countries countriesData={props.intl.messages.countries} />
+        <Experience experienceData={props.intl.messages.experience} />
+        <About aboutData={props.intl.messages.about} />
+      </ParallaxProvider>
+    </ThemeProvider>
+  )
+}
+
+App.propTypes = {
+  intl: PropTypes.object.isRequired
+}
+
+// Retrieve data from store as props
+function mapStateToProps(store) {
+  return {
+    intl: store.intl
   }
 }
 
-export default App;
+export default connect(mapStateToProps)(App)
+
+// <IntlWrapper>
+//   <ParallaxProvider>
+//     <Router>
+//       <Switch>
+//         <Route exact path='/' render={() => {
+//             return (
+//               <div>
+//                 <Header headerData={props.intl.messages.header} intl={props.intl} />
+//                 <Subheader subheaderData={props.intl.messages.subheader} />
+//                 <Countries countriesData={props.intl.messages.countries} />
+//                 <Experience experienceData={props.intl.messages.experience} />
+//                 <About aboutData={props.intl.messages.about} />
+//                 <Sentence sentenceData={props.intl.messages.sentence} />
+//                 <Social />
+//                 <SecondSentence secondSentenceData={props.intl.messages.secondSentence} />
+//                 <LinksGalery linksGaleryData={props.intl.messages.linksGalery} />
+//               </div>
+//             )
+//           }} />
+//         <Route path='/events' render={() => <Galery />} />
+//         <Route path='/plates' render={() => <About />} />
+//       </Switch>
+//     </Router>
+//   </ParallaxProvider>
+// </IntlWrapper>
+

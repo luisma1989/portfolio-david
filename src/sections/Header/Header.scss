@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.header {
+  margin: 50px;
+  overflow: hidden;
+  background: url(./assets/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 5000ms;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  .parallax-gradient {
+    background: radial-gradient(ellipse farthest-corner at center center, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.85) 100%) repeat scroll 0% 0%;
+  }
+}
+
+
+.home_text {
+  text-align: left;
+}
+
+.home_text {
+  h1 {
+    font-family: 'Josefin Slab', serif;
+    font-size: 60px;
+    color: darkgrey;
+    text-transform: uppercase;
+    text-align: center;
+
+    span {
+      color: #fff;
+      font-size: 100px;
+    }
+  }
+}
+
+.home_text p {
+  color: #fff;
+  font-size: 17px;
+  line-height: 28px;
+  margin-top: 0px;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 640px) {
+  .home_text {
+    h1 {
+      font-size: 45px;
+
+      span {
+        font-size: 75px;
+      }
+    }
+  }
+}
