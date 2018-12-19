@@ -18,16 +18,15 @@
     height: 500px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: $gray;
-    padding: 100px 150px;
+    padding: 100px 50px;
     position: relative;
     right: 0;
     top: 50px;
 
     article {
       color: white;
-      flex: 0 0 40%;
+      flex: 0 0 45%;
     }
   }
 }

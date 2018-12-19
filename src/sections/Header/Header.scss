@@ -3,19 +3,15 @@
   margin: 0;
 }
 
-body {
-  font-family: 'Raleway', sans-serif;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
 .header {
   margin: 50px;
   overflow: hidden;
-  background: url(./assets/bg.jpg);
+  background: url(./assets/bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   transition: transform 5000ms;
+  max-width: 1700px;
+  margin: 0 auto;
 
   &:hover {
     transform: scale(1.1);
@@ -26,12 +22,8 @@ body {
   }
 }
 
-
 .home_text {
   text-align: left;
-}
-
-.home_text {
   h1 {
     font-family: 'Josefin Slab', serif;
     font-size: 60px;
@@ -44,14 +36,14 @@ body {
       font-size: 100px;
     }
   }
-}
 
-.home_text p {
-  color: #fff;
-  font-size: 17px;
-  line-height: 28px;
-  margin-top: 0px;
-  font-weight: 300;
+  p {
+    color: #fff;
+    font-size: 17px;
+    line-height: 28px;
+    margin-top: 0px;
+    font-weight: 300;
+  }
 }
 
 @media only screen and (max-width: 640px) {

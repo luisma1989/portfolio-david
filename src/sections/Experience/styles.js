@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { rem } from 'polished'
-import { H2, H3, H4, H5 } from 'components/Fonts'
+import { H2, H3 } from 'components/Fonts'
 
 export const Wrapper = styled.section`
   max-width: 1500px;
@@ -18,12 +18,15 @@ export const Container = styled.div`
 Container.displayName = 'Container';
 
 export const Title = styled(H2)`
-  /* margin-top: ${rem('20px')}; */
+  margin-bottom: ${rem('60px')};
 `;
 Title.displayName = 'Title';
 
 export const Subtitle = styled(H3)`
-  /* margin-top: ${rem('20px')}; */
+  span {
+    color: ${({ theme}) => theme.colors.rose};
+    font-weight: bold;
+  }
 `;
 Subtitle.displayName = 'Subtitle';
 

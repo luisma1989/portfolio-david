@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { H3, Body } from 'components/Fonts'
 import './countries.css'
 import background from './assets/countries-bg.jpg'
 
@@ -17,12 +17,12 @@ const Countries = ({ countriesData }) => {
         data-wow-duration='2s'
       >
         <article>
-          <h3>{countriesData.es.title}</h3>
-          <p>{countriesData.es.text}</p>
+          <H3 variant='yellow'>{countriesData.es.title}</H3>
+          <Body variant='white'>{countriesData.es.text}</Body>
         </article>
         <article>
-          <h3>{countriesData.ru.title}</h3>
-          <p>{countriesData.ru.text}</p>
+          <H3 variant='yellow'>{countriesData.ru.title}</H3>
+          <Body variant='white'>{countriesData.ru.text}</Body>
         </article>
       </div>
     </section>

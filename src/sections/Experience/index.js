@@ -14,7 +14,7 @@ const Experience = ({ experienceData }) => {
     <Wrapper>
       <Container>
         <Title>{experienceData.title}</Title>
-        <Subtitle>{experienceData.subtitle}</Subtitle>
+        <Subtitle dangerouslySetInnerHTML={{ __html: experienceData.subtitle }} />
         <List>
           { experienceData.jobs.map((job) =>
             <ItemListContent job={job} key={job.id} />

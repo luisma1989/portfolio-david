@@ -1,5 +1,5 @@
 import React from 'react'
-import { Body } from 'components/Fonts'
+import { Body, Caps } from 'components/Fonts'
 import {
   ItemList,
   Info,
@@ -14,10 +14,10 @@ const ItemListContent = ({ job }) => {
     <ItemList className={`wow zoomIn ${job.class}`}>
       { job.image && <Image src={job.image} title={job.title} /> }
       <Info>
-        <span className='timeline__id'>{job.time}</span>
+        <Caps className='timeline__id' variant='yellow'>{job.time}</Caps>
         <div>
-          <TitleSection>{job.title}</TitleSection>
-          <SubtitleSection>{job.subtitle}</SubtitleSection>
+          <TitleSection variant='green'>{job.title}</TitleSection>
+          <SubtitleSection variant='rose'>{job.subtitle}</SubtitleSection>
           <Body>{job.text}</Body>
         </div>
       </Info>
