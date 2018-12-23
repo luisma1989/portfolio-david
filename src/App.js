@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { ThemeProvider } from 'styled-components';
-import styledTheme from '../src/styles/styled-theme';
+import { ThemeProvider } from 'styled-components'
+import styledTheme from 'styles/styled-theme'
+import StyledGlobal from 'styles/styled-global'
 
 // import IntlWrapper from './Intl/IntlWrapper'
 import { ParallaxProvider } from 'react-scroll-parallax'
@@ -20,12 +21,11 @@ import About from './sections/About'
 // import Galery from './components/Galery'
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import './styles/core.css'
-
 const App = props => {
   return (
     <ThemeProvider theme={styledTheme}>
       <ParallaxProvider>
+        <StyledGlobal />
         <Header headerData={props.intl.messages.header} intl={props.intl} />
         <Subheader subheaderData={props.intl.messages.subheader} />
         <Countries countriesData={props.intl.messages.countries} />

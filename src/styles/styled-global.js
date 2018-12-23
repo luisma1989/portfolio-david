@@ -10,7 +10,7 @@ const StyledGlobal = createGlobalStyle`
     margin: 0pt;
     color: ${({ theme }) => theme.colors.black};
     font-family: CerebriSans-Light, sans-serif;
-    background-color: ${({ theme }) => theme.colors.gray};
+    background-color: ${({ theme }) => theme.colors.lightGray};
   }
 
   main {
