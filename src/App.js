@@ -13,8 +13,8 @@ import Subheader from './sections/Subheader'
 import Countries from './sections/Countries'
 import Experience from './sections/Experience'
 import About from './sections/About'
+import Social from './sections/Social'
 // import Sentence from './components/Sentence'
-// import Social from './components/Social'
 // import LinksGalery from './components/LinksGalery'
 
 // import SecondSentence from './components/SecondSentence'
@@ -29,6 +29,7 @@ const App = props => {
         <Header headerData={props.intl.messages.header} intl={props.intl} />
         <Subheader subheaderData={props.intl.messages.subheader} />
         <Countries countriesData={props.intl.messages.countries} />
+        <Social />
         <Experience experienceData={props.intl.messages.experience} />
         <About aboutData={props.intl.messages.about} />
       </ParallaxProvider>
