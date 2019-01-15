@@ -125,9 +125,18 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "babel-plugin-styled-components",
+        {
+          "displayName": true
+        }
+      ]
     ]
   },
   "devDependencies": {
-    "@storybook/react": "^4.0.10"
+    "@storybook/react": "^4.0.10",
+    "babel-plugin-styled-components": "^1.10.0"
   }
 }
