@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 import WOW from 'wowjs'
 import { connect } from 'react-redux'
 import { Parallax } from 'react-scroll-parallax'
+import { H4 } from 'components/Fonts'
 // import ChangeLanguage from '../../components/ChangeLanguage'
 // import { switchLanguage } from '../../Intl/IntlActions'
-import { H1 } from 'components/Fonts'
 import {
   Container,
   ParallaGradient,
+  Wrapper,
+  Title,
 } from './styles'
 
 class Header extends React.Component {
@@ -26,22 +28,23 @@ class Header extends React.Component {
     const { headerData } = this.props
 
     return (
-      <Container className='header'>
-        <ParallaGradient>
-          {/* <ChangeLanguage switchLanguage={lang => this.props.dispatch(switchLanguage(lang))} intl={this.props.intl} />*/}
-          <Parallax offsetYMax={40} offsetYMin={1} slowerScrollRate tag='figure'>
-            <div className='homeContainer'>
-              <div className='home_text wow bounceIn'>
-                <H1 variant='white' className='wow rubberBand title'>
-                  <span>{headerData.name}</span>
-                  <br />
-                  {headerData.apellidos}
-                </H1>
+      <Wrapper>
+        <Container className='header'>
+          <ParallaGradient>
+            {/* <ChangeLanguage switchLanguage={lang => this.props.dispatch(switchLanguage(lang))} intl={this.props.intl} />*/}
+            <Parallax offsetYMax={40} offsetYMin={1} slowerScrollRate tag='figure'>
+              <div className='homeContainer'>
+                <div className='home_text wow bounceIn'>
+                  <Title variant='white' className='wow rubberBand title'>
+                    {headerData.name} {headerData.apellidos}
+                  </Title>
+                </div>
               </div>
-            </div>
-          </Parallax>
-        </ParallaGradient>
-      </Container>
+            </Parallax>
+          </ParallaGradient>
+        </Container>
+        <H4>Chef ejecutivo</H4>
+      </Wrapper>
     )
   }
 }

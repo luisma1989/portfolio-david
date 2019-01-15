@@ -1,25 +1,47 @@
 import styled from 'styled-components'
-import { H2 } from 'components/Fonts'
-import bg from './assets/bg2.jpg'
+import bg from './assets/bg.jpg'
+import { black, white } from 'utils/constants/colors'
+import { H1 } from 'components/Fonts'
 
-export const Container = styled.div`
+export const Wrapper = styled.section`
   overflow: hidden;
-  background: url(${bg});
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: transform 5000ms;
   max-width: 1500px;
   margin: 0 auto;
   height: 100vh;
+  background-color: ${black};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
-  &:hover {
-    transform: scale(1.1);
+  h4 {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    color: ${white};
   }
 `;
-Container.displayName = 'Container';
+
+export const Container = styled.div`
+  background: url(${bg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 60rem;
+  height: 60rem;
+  border-radius: 50%;
+  background-position: center;
+`;
 
 export const ParallaGradient = styled.div`
   height: 100%;
-  background: radial-gradient(ellipse farthest-corner at center center, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.85) 100%) repeat scroll 0% 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
-ParallaGradient.displayName = 'Title';
+
+export const Title = styled(H1)`
+  font-family: 'Righteous', sans-serif;
+  text-transform: uppercase;
+  font-size: 85px;
+  white-space: nowrap;
+`;
