@@ -6,6 +6,7 @@ export const Wrapper = styled.section`
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
+  padding-bottom: ${rem('50px')};
   background-color: white;
 `;
 Wrapper.displayName = 'Wrapper';
