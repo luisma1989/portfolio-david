@@ -4,18 +4,20 @@ function variantColor({ theme, variant = 'black' }) {
   return theme.colors[`${variant}`];
 }
 
+
+// function fontWeigth
 export const H1 = styled.h1`
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   line-height: 60px;
   font-size: 70px;
   margin-top: 0;
   text-rendering: optimizeLegibility;
   color: ${variantColor};
-  font-weight: 300;
+  font-weight: 500;
 `;
 
 export const H2 = styled.h2`
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   line-height: 32px;
   font-size: 50px;
   line-height: 36px;
@@ -31,7 +33,7 @@ export const H2 = styled.h2`
 `;
 
 export const H3 = styled.h3`
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   line-height: 32px;
   font-size: 35px;
   margin-top: 0;
@@ -45,7 +47,7 @@ export const H3 = styled.h3`
 `;
 
 export const H4 = styled.h4`
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   line-height: 32px;
   font-size: 28px;
   margin-top: 0;
@@ -55,7 +57,7 @@ export const H4 = styled.h4`
 `;
 
 export const H5 = styled.h5`
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   line-height: 32px;
   font-size: 18px;
   margin-top: 0;
@@ -66,7 +68,7 @@ export const H5 = styled.h5`
 `;
 
 export const Body = styled.p`
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   line-height: 25px;
   margin-top: 0;
@@ -80,7 +82,7 @@ export const Body = styled.p`
 `;
 
 export const Caps = styled.p`
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 15px;
   line-height: 22px;
   margin-top: 0;
