@@ -1,6 +1,6 @@
-@import "./src/styles/_base";
+import styled from 'styled-components';
 
-.countries {
+const Container = styled.section`
   display: flex;
   min-height: 550px;
   max-width: 1500px;
@@ -18,7 +18,7 @@
     height: 500px;
     display: flex;
     justify-content: space-between;
-    background-color: $gray;
+    background-color: ${({ theme }) => theme.colors.gray};
     padding: 100px 50px;
     position: relative;
     right: 0;
@@ -29,4 +29,6 @@
       flex: 0 0 45%;
     }
   }
-}
+`;
+
+export default Container;

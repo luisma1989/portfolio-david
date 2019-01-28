@@ -1,11 +1,11 @@
 import React from 'react'
 import { H3, Body } from 'components/Fonts'
-import './countries.css'
 import background from './assets/countries-bg.jpg'
+import Container from './styles';
 
 const Countries = ({ countriesData }) => {
   return (
-    <section className='countries'>
+    <Container>
       <img
         src={background}
         className='wow slideInLeft'
@@ -25,7 +25,7 @@ const Countries = ({ countriesData }) => {
           <Body variant='white'>{countriesData.ru.text}</Body>
         </article>
       </div>
-    </section>
+    </Container>
   )
 }
 
