@@ -19,19 +19,32 @@ import Social from './sections/Social'
 
 // import SecondSentence from './components/SecondSentence'
 // import Galery from './components/Galery'
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 const App = props => {
   return (
     <ThemeProvider theme={styledTheme}>
       <ParallaxProvider>
         <StyledGlobal />
-        <Header headerData={props.intl.messages.header} intl={props.intl} />
-        <Subheader subheaderData={props.intl.messages.subheader} />
-        <Countries countriesData={props.intl.messages.countries} />
-        <Social />
-        <Experience experienceData={props.intl.messages.experience} />
-        <About aboutData={props.intl.messages.about} />
+
+        <Router>
+          <Switch>
+            <Route exact path='/' render={() => {
+                return (
+                  <div>
+                    <Header headerData={props.intl.messages.header} intl={props.intl} />
+                    <Subheader subheaderData={props.intl.messages.subheader} />
+                    <Countries countriesData={props.intl.messages.countries} />
+                    <Social />
+                    <Experience experienceData={props.intl.messages.experience} />
+                    <About aboutData={props.intl.messages.about} />
+                  </div>
+                )
+              }} />
+            {/* <Route path='/events' render={() => <Galery />} />
+            <Route path='/plates' render={() => <About />} /> */}
+          </Switch>
+        </Router>
       </ParallaxProvider>
     </ThemeProvider>
   )
@@ -49,30 +62,3 @@ function mapStateToProps(store) {
 }
 
 export default connect(mapStateToProps)(App)
-
-// <IntlWrapper>
-//   <ParallaxProvider>
-//     <Router>
-//       <Switch>
-//         <Route exact path='/' render={() => {
-//             return (
-//               <div>
-//                 <Header headerData={props.intl.messages.header} intl={props.intl} />
-//                 <Subheader subheaderData={props.intl.messages.subheader} />
-//                 <Countries countriesData={props.intl.messages.countries} />
-//                 <Experience experienceData={props.intl.messages.experience} />
-//                 <About aboutData={props.intl.messages.about} />
-//                 <Sentence sentenceData={props.intl.messages.sentence} />
-//                 <Social />
-//                 <SecondSentence secondSentenceData={props.intl.messages.secondSentence} />
-//                 <LinksGalery linksGaleryData={props.intl.messages.linksGalery} />
-//               </div>
-//             )
-//           }} />
-//         <Route path='/events' render={() => <Galery />} />
-//         <Route path='/plates' render={() => <About />} />
-//       </Switch>
-//     </Router>
-//   </ParallaxProvider>
-// </IntlWrapper>
-

@@ -1,8 +1,7 @@
 import { createStore, applyMiddleware } from 'redux'
 import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
-import { composeWithDevTools } from 'redux-devtools-extension';
-
+import { composeWithDevTools } from 'redux-devtools-extension'
 import rootReducer from '../reducers'
 
 const enhancer = composeWithDevTools(
@@ -10,5 +9,5 @@ const enhancer = composeWithDevTools(
 );
 
 export default function configureStore (initialstate) {
-  return createStore(rootReducer, initialstate, enhancer);
+  return createStore(rootReducer, initialstate, enhancer)
 };

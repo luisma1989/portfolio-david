@@ -1,7 +1,6 @@
 import { enabledLanguages, localizationData } from './setup'
 import { SWITCH_LANGUAGE } from './IntlActions'
 
-
 const initLocale = 'es'
 const initialState = {
   locale: initLocale,
@@ -12,7 +11,7 @@ const initialState = {
 const IntlReducer = (state = initialState, action) => {
   switch (action.type) {
     case SWITCH_LANGUAGE: {
-      const { type, ...actionWithoutType } = action // eslint-disable-line
+      const { type, ...actionWithoutType } = action
       return { ...state, ...actionWithoutType }
     }
 
