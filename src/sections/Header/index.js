@@ -34,7 +34,7 @@ class Header extends React.Component {
             {/* <ChangeLanguage switchLanguage={lang => this.props.dispatch(switchLanguage(lang))} intl={this.props.intl} />*/}
             <Parallax offsetYMax={40} offsetYMin={1} slowerScrollRate tag='figure'>
               <div className='homeContainer'>
-                <div className='home_text wow bounceIn'>
+                <div className='home_text'>
                   <Title variant='white' className='wow rubberBand title'>
                     {headerData.name} {headerData.apellidos}
                   </Title>
