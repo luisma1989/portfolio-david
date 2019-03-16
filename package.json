@@ -137,7 +137,7 @@
     ]
   },
   "devDependencies": {
-    "@storybook/react": "^4.0.10",
+    "@storybook/react": "^5.0.1",
     "babel-plugin-styled-components": "^1.10.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
