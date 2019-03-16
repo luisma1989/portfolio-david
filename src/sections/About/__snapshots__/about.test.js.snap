@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About: Render the about component 1`] = `
+<styles__Container>
+  <styles__Header>
+    <Fonts__Caps
+      bold={true}
+    >
+      header
+    </Fonts__Caps>
+    <div>
+      <span>
+        <styles__FirstLetter>
+          D
+        </styles__FirstLetter>
+      </span>
+      <span>
+        <styles__SecondLetter>
+          F
+        </styles__SecondLetter>
+      </span>
+    </div>
+  </styles__Header>
+  <styles__Section>
+    <styles__Article>
+      <styles__Title
+        className="smalltitle"
+      >
+        title
+      </styles__Title>
+      <p
+        className="p4 wow zoomIn"
+      >
+        text
+      </p>
+    </styles__Article>
+    <styles__Article>
+      <img
+        alt="title"
+        src="lemon.jpg"
+      />
+    </styles__Article>
+  </styles__Section>
+</styles__Container>
+`;
