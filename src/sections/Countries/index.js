@@ -3,7 +3,7 @@ import { H3, Body } from 'components/Fonts'
 import background from './assets/countries-bg.jpg'
 import Container from './styles';
 
-const Countries = ({ countriesData }) => {
+const Countries = ({ countriesData: { es, ru } }) => {
   return (
     <Container>
       <img
@@ -17,12 +17,12 @@ const Countries = ({ countriesData }) => {
         data-wow-duration='2s'
       >
         <article>
-          <H3 variant='yellow'>{countriesData.es.title}</H3>
-          <Body variant='white'>{countriesData.es.text}</Body>
+          <H3 variant='yellow'>{es.title}</H3>
+          <Body variant='white'>{es.text}</Body>
         </article>
         <article>
-          <H3 variant='yellow'>{countriesData.ru.title}</H3>
-          <Body variant='white'>{countriesData.ru.text}</Body>
+          <H3 variant='yellow'>{ru.title}</H3>
+          <Body variant='white'>{ru.text}</Body>
         </article>
       </div>
     </Container>
