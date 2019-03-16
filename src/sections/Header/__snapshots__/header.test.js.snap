@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`first test Shoul render the component 1`] = `
+<styles__Wrapper>
+  <styles__Container
+    className="header"
+  >
+    <styles__ParallaGradient>
+      <Parallax
+        disabled={false}
+        offsetXMax={0}
+        offsetXMin={0}
+        offsetYMax={40}
+        offsetYMin={0}
+        slowerScrollRate={true}
+        tag="figure"
+      >
+        <div
+          className="homeContainer"
+        >
+          <div
+            className="home_text"
+          >
+            <styles__Title
+              className="wow rubberBand title"
+              variant="white"
+            >
+               
+            </styles__Title>
+          </div>
+        </div>
+      </Parallax>
+    </styles__ParallaGradient>
+  </styles__Container>
+  <Fonts__H4>
+    Chef ejecutivo
+  </Fonts__H4>
+</styles__Wrapper>
+`;

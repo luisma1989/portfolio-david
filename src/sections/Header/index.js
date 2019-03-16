@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import WOW from 'wowjs'
-import { connect } from 'react-redux'
 import { Parallax } from 'react-scroll-parallax'
 import { H4 } from 'components/Fonts'
 // import ChangeLanguage from '../../components/ChangeLanguage'
@@ -16,27 +15,25 @@ import {
 class Header extends React.Component {
   static propTypes = {
     headerData: PropTypes.object.isRequired,
-    intl: PropTypes.object,
-    dispatch: PropTypes.func.isRequired
   }
 
   componentDidMount () {
-    new WOW.WOW().init();
+    new WOW.WOW().init()
   }
 
   render () {
-    const { headerData } = this.props
+    const { name, apellidos } = this.props.headerData
 
     return (
       <Wrapper>
         <Container className='header'>
           <ParallaGradient>
             {/* <ChangeLanguage switchLanguage={lang => this.props.dispatch(switchLanguage(lang))} intl={this.props.intl} />*/}
-            <Parallax offsetYMax={40} offsetYMin={1} slowerScrollRate tag='figure'>
+            <Parallax offsetYMax={40} offsetYMin={0} slowerScrollRate tag='figure'>
               <div className='homeContainer'>
                 <div className='home_text'>
                   <Title variant='white' className='wow rubberBand title'>
-                    {headerData.name} {headerData.apellidos}
+                    {name} {apellidos}
                   </Title>
                 </div>
               </div>
@@ -49,12 +46,4 @@ class Header extends React.Component {
   }
 }
 
-// Retrieve data from store as props
-function mapStateToProps(store) {
-  return {
-    intl: store.intl
-  };
-}
-
-
-export default connect(mapStateToProps)(Header)
+export default Header
