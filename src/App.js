@@ -18,7 +18,7 @@ import Social from './sections/Social'
 // import LinksGalery from './components/LinksGalery'
 
 // import SecondSentence from './components/SecondSentence'
-// import Galery from './components/Galery'
+import Galery from './sections/Galery'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 const App = props => {
@@ -41,7 +41,8 @@ const App = props => {
                   </div>
                 )
               }} />
-            {/* <Route path='/events' render={() => <Galery />} />
+            <Route path='/events' render={() => <Galery />} />
+            {/*
             <Route path='/plates' render={() => <About />} /> */}
           </Switch>
         </Router>
