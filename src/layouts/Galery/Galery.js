@@ -3,6 +3,7 @@ import Gallery from 'react-photo-gallery'
 import Measure from 'react-measure'
 import Lightbox from 'react-images'
 import './Galery.css'
+import { DetailsPageElm } from './styles'
 
 const importAll = (imagesImported) => {
   let images = []
@@ -56,7 +57,7 @@ const Galery = () => {
 
   if (PHOTO_SET) {
     return (
-      <article className="galery">
+      <DetailsPageElm className='galery'>
         {renderGallery()}
         <Lightbox
           images={PHOTO_SET}
@@ -68,7 +69,7 @@ const Galery = () => {
           isOpen={lightboxIsOpen}
           width={1600}
         />
-      </article>
+      </DetailsPageElm>
     )
   }
 }

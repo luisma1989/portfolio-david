@@ -8,6 +8,7 @@ import {
   Subtitle,
   List,
 } from './styles.js'
+import { Link } from 'react-router-dom';
 
 const Experience = ({ experienceData }) => {
   return (
@@ -17,7 +18,9 @@ const Experience = ({ experienceData }) => {
         <Subtitle dangerouslySetInnerHTML={{ __html: experienceData.subtitle }} />
         <List>
           { experienceData.jobs.map((job) =>
-            <ItemListContent job={job} key={job.id} />
+            <Link to={job.link} key={job.id}>
+              <ItemListContent job={job} />
+            </Link>
           )}
         </List>
       </Container>

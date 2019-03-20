@@ -11,7 +11,7 @@ const images = require.context('../../assets/', true)
 const Image = ({ src, title }) => <img src={images(src)} alt={title} />
 const ItemListContent = ({ job }) => {
   return (
-    <ItemList className={`wow zoomIn ${job.class}`}>
+    <ItemList className={`${job.class}`}>
       { job.image && <Image src={job.image} title={job.title} /> }
       <Info>
         <Caps className='timeline__id' variant='yellow'>{job.time}</Caps>

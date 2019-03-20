@@ -15,7 +15,7 @@ const Subheader = ({
       <div className='container'>
         <Parallax
           offsetYMax={170}
-          offsetYMin={10}
+          offsetYMin={0}
           slowerScrollRate
           tag='figure'
         >
@@ -26,7 +26,7 @@ const Subheader = ({
         </Parallax>
         <Parallax
           offsetYMax={40}
-          offsetYMin={1}
+          offsetYMin={0}
           slowerScrollRate
           tag='figure'
         >

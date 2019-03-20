@@ -10,6 +10,7 @@ export default {
       class: 'image-rigtht',
       id: '0',
       image: './plato1.jpeg',
+      link: '/events',
     },
     {
       title: 'Compañia globus',
@@ -19,6 +20,7 @@ export default {
       class: 'image-left',
       id:'1',
       image: './plato2.jpeg',
+      link: '/events',
     },
     {
       title: 'Compañia SPk-Neon',
@@ -28,6 +30,7 @@ export default {
       class: 'image-rigtht',
       id:'2',
       image: './plato3.jpeg',
+      link: '/events',
     },
     {
       title: 'Hotel Hilton kirov, Restaurante Karin.',
@@ -37,6 +40,7 @@ export default {
       class: 'image-left',
       id:'3',
       image: './plato4.jpeg',
+      link: '/events',
     },
     {
       title: 'Restaurante колессо (koleso)',
@@ -46,6 +50,7 @@ export default {
       class: 'image-rigtht',
       id:'4',
       image: './plato5.jpeg',
+      link: '/events',
     },
     {
       title: 'Hotel Avant Torrejón ****',
@@ -55,6 +60,7 @@ export default {
       class: 'image-left',
       id:'5',
       image: './plato3.jpeg',
+      link: '/events',
     },
     // {
     //   title: 'Restaurante Sula',
@@ -91,5 +97,5 @@ export default {
     //   id:'9',
     //   image: './plato3.jpeg',
     // }
-  ]
+  ],
 }
