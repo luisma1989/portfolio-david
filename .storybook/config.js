@@ -12,6 +12,7 @@ function loadStories() {
   require('../stories/Social')
   require('../stories/Experience')
   require('../stories/About')
+  require('../stories/Gallery')
 }
 
 addDecorator((story) => (
