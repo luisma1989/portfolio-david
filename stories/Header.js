@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Header from 'sections/Header';
+import Header from 'layouts/home/Header';
 
 const headerData = {
   headerData:{

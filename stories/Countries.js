@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Countries from 'sections/Countries';
+import Countries from 'layouts/home/Countries';
 
 const countriesData = {
   es: {

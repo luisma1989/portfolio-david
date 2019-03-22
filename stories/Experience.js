@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import Experience from 'sections/Experience'
+import Experience from 'layouts/home/Experience'
 
 const experienceData = {
   title: 'Mi experiencia',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Subheader from 'sections/Subheader';
+import Subheader from 'layouts/home/Subheader';
 
 const SubheaderData = {
     title: 'title',
