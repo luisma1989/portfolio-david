@@ -34,5 +34,11 @@ Subtitle.displayName = 'Subtitle';
 export const List = styled.ol`
   display: flex;
   flex-direction: column;
+  a {
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
 `;
 List.displayName = 'List';

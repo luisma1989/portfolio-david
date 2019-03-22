@@ -5,7 +5,7 @@ export default {
     {
       title: 'La terraza del casino (Casino Madrid)',
       subtitle: 'Ayudante',
-      text: 'La Terraza del Casino, en uno de los mayores exponentes de la vanguardia gastronómica española. Una propuesta culinaria en la que se busca la originalidad, la creatividad más extrema, la transgresión y la sorpresa en un entorno, sin embargo, tremendamente clásico.',
+      text: 'La Terraza del Casino, es uno de los mayores exponentes de la vanguardia gastronómica española. Una propuesta culinaria en la que se busca la originalidad, la creatividad más extrema, la transgresión y la sorpresa en un entorno, sin embargo, tremendamente clásico.',
       time: 'Actualidad',
       class: 'image-rigtht',
       id: '0',

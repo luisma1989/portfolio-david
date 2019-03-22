@@ -30,6 +30,20 @@ export const Container = styled.div`
   height: 60rem;
   border-radius: 50%;
   background-position: center;
+
+  @media (max-width: 860px) {
+    width: 50rem;
+    height: 50rem;
+  }
+
+  @media (max-width: 640px) {
+    width: 35rem;
+    height: 35rem;
+  }
+
+  .parallax-inner {
+    transform: initial!important;
+  }
 `;
 
 export const ParallaGradient = styled.div`
@@ -44,4 +58,13 @@ export const Title = styled(H1)`
   text-transform: uppercase;
   font-size: 85px;
   white-space: nowrap;
+
+  @media (max-width: 860px) {
+    font-size: 65px;
+    white-space: initial;
+  }
+
+  @media (max-width: 860px) {
+    font-size: 65px;
+  }
 `;

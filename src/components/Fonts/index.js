@@ -4,7 +4,6 @@ function variantColor({ theme, variant = 'black' }) {
   return theme.colors[`${variant}`];
 }
 
-
 // function fontWeigth
 export const H1 = styled.h1`
   font-family: 'Raleway', sans-serif;
@@ -40,6 +39,7 @@ export const H3 = styled.h3`
   text-rendering: optimizeLegibility;
   color: ${variantColor};
   font-weight: 300;
+  line-height: 50px;
 
   @media (max-width: 768px) {
     font-size: 16px;

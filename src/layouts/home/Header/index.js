@@ -25,7 +25,7 @@ const Header = ({ headerData }) => {
           <Parallax offsetYMax={40} offsetYMin={0} slowerScrollRate tag='figure'>
             <div className='homeContainer'>
               <div className='home_text'>
-                <Title variant='white' className='wow rubberBand title'>
+                <Title variant='white' className='title'>
                   {name} {apellidos}
                 </Title>
               </div>

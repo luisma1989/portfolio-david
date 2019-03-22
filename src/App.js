@@ -6,7 +6,7 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import Home from './layouts/home';
-import Galery from './layouts/Galery'
+import Gallery from './layouts/Gallery'
 import styled from 'styled-components'
 
 const PageContainer = styled.div`
@@ -31,7 +31,7 @@ const App = () =>
                 >
                   <Switch location={location}>
                     <Route exact path='/' component={Home} />
-                    <Route path='/events' component={Galery} />
+                    <Route path='/events' component={Gallery} />
                     {/*< path='/plates' render={() => <About />} /> */}
                   </Switch>
                 </CSSTransition>

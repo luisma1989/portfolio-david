@@ -5,6 +5,7 @@ export const ItemList = styled.li`
   display: flex;
   margin-top: 100px;
 
+
   &.image-rigtht {
     flex-direction: row-reverse;
   }
