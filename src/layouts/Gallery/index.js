@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import Gallery from 'react-photo-gallery'
-import Measure from 'react-measure'
+import { Link } from 'react-router-dom'
 import Lightbox from 'react-images'
-import './Galery.css'
-import { DetailsPageElm } from './styles'
+import { GaleryContainer, GalleryStyles } from './styles'
+import Arrow from 'components/Icons/Arrow'
 
 const importAll = (imagesImported) => {
   let images = []
@@ -18,7 +17,7 @@ const importAll = (imagesImported) => {
   return images
 }
 
-const Galery = () => {
+const Gallery = () => {
   const [currentImage, setCurrentImage] = useState(0)
   const [lightboxIsOpen, setLightboxIsOpen] = useState(false)
   const PHOTO_SET = importAll(require.context('./assets', false, /\.(png|jpe?g|svg)$/));
@@ -35,29 +34,20 @@ const Galery = () => {
 
   const renderGallery = () => {
     return (
-      <Measure whitelist={['width']}>
-        {({ width }) => {
-            let cols = 3
-            if (width >= 480) { cols = 2 }
-            if (width >= 1024) { cols = 3 }
-            if (width >= 1824) { cols = 4 }
-            return (
-              <Gallery
-                photos={PHOTO_SET}
-                columns={cols}
-                onClick={openLightbox}
-                index
-              />
-            )
-          }
-        }
-      </Measure>
+      <GalleryStyles
+        className='gallery'
+        photos={PHOTO_SET}
+        onClick={openLightbox}
+      />
     )
   }
 
   if (PHOTO_SET) {
     return (
-      <DetailsPageElm className='galery'>
+      <GaleryContainer className='galery'>
+        <Link to='/'>
+          <Arrow />
+        </Link>
         {renderGallery()}
         <Lightbox
           images={PHOTO_SET}
@@ -69,9 +59,9 @@ const Galery = () => {
           isOpen={lightboxIsOpen}
           width={1600}
         />
-      </DetailsPageElm>
+      </GaleryContainer>
     )
   }
 }
 
-export default Galery
+export default Gallery
