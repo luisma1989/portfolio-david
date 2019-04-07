@@ -11,11 +11,19 @@ export const ItemList = styled.li`
   }
 
   img {
-    height: 680px;
+    height: auto;
     width: 520px;
     background-position: center;
     background-size: cover;
     margin: 0 auto;
+
+    @media (max-width: 1060px) {
+      width: 350px;
+      height: 50%;
+    }
+
+    @media (max-width: 850px) {
+    }
   }
 `;
 ItemList.displayName = 'ItemList';

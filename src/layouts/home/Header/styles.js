@@ -59,12 +59,16 @@ export const Title = styled(H1)`
   font-size: 85px;
   white-space: nowrap;
 
-  @media (max-width: 860px) {
-    font-size: 65px;
+  @media (max-width: 1220px) {
+    font-size: 75px;
+  }
+
+  @media (max-width: 1080px) {
+    font-size: 80px;
     white-space: initial;
   }
 
   @media (max-width: 860px) {
-    font-size: 65px;
+    font-size: 62px;
   }
 `;

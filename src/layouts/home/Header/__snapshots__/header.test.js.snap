@@ -22,7 +22,7 @@ exports[`first test Shoul render the component 1`] = `
             className="home_text"
           >
             <styles__Title
-              className="wow rubberBand title"
+              className="title"
               variant="white"
             >
                

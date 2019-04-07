@@ -12,6 +12,10 @@ const Container = styled.section`
     height: 500px;
     position: relative;
     left: 0;
+
+    @media (max-width: 1020px) {
+      display: none;
+    }
   }
 
   .text-section {
@@ -24,9 +28,18 @@ const Container = styled.section`
     right: 0;
     top: 50px;
 
+    @media (max-width: 640px) {
+      flex-wrap: wrap;
+      padding: 50px;
+    }
+
     article {
       color: white;
       flex: 0 0 45%;
+
+      @media (max-width: 640px) {
+        flex: 0 100%;
+      }
     }
   }
 `;

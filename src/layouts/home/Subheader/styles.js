@@ -6,13 +6,34 @@ const Container = styled.section`
   margin: 0 auto;
   background-color: white;
 
-  .container {
+  @media (max-width: 768px) {
+    min-height: auto;
+  }
+
+  & > div {
     display: flex;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
   }
 
   .testimony {
     height: 400px;
     width: 70%;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+
+    @media (max-width: 1200px) {
+      height: auto;
+      padding-top: 20px;
+    }
 
     h2 {
       font-size: 70px;
@@ -22,9 +43,21 @@ const Container = styled.section`
   .image-subheader {
     margin: 50px;
 
+    @media (max-width: 992px) {
+      margin: 20px auto;
+    }
+
     img {
       width: 500px;
       height: auto;
+
+      @media (max-width: 992px) {
+        width: 420px;
+      }
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
     }
   }
 `;

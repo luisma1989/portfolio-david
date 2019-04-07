@@ -15,6 +15,10 @@ export const Container = styled.div`
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    padding: 0 20px;
+  }
 `;
 Container.displayName = 'Container';
 
@@ -34,6 +38,8 @@ Subtitle.displayName = 'Subtitle';
 export const List = styled.ol`
   display: flex;
   flex-direction: column;
+  padding-left: 0;
+
   a {
     &:hover {
       text-decoration: none;

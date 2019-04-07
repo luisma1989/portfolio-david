@@ -4,15 +4,19 @@ function variantColor({ theme, variant = 'black' }) {
   return theme.colors[`${variant}`];
 }
 
-// function fontWeigth
 export const H1 = styled.h1`
   font-family: 'Raleway', sans-serif;
-  line-height: 60px;
   font-size: 70px;
+  line-height: 60px;
   margin-top: 0;
   text-rendering: optimizeLegibility;
   color: ${variantColor};
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 50px;
+    line-height: 55px;
+  }
 `;
 
 export const H2 = styled.h2`
