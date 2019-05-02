@@ -11,7 +11,7 @@ const experienceData = {
       subtitle: 'Ayudante',
       text: 'La Terraza del Casino, en uno de los mayores exponentes de la vanguardia gastronómica española. Una propuesta culinaria en la que se busca la originalidad, la creatividad más extrema, la transgresión y la sorpresa en un entorno, sin embargo, tremendamente clásico.',
       time: 'Actualidad',
-      class: 'image-rigtht',
+      class: 'image-right',
       id: '0',
       image: './plato1.jpeg',
     },

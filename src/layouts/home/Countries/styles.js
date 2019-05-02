@@ -30,7 +30,7 @@ const Container = styled.section`
 
     @media (max-width: 640px) {
       flex-wrap: wrap;
-      padding: 50px;
+      padding: 50px 20px;
     }
 
     article {

@@ -30,7 +30,7 @@ export const H2 = styled.h2`
   font-weight: 300;
 
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 24px;
     line-height: 26px;
   }
 `;
@@ -46,7 +46,8 @@ export const H3 = styled.h3`
   line-height: 50px;
 
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 28px;
   }
 `;
 

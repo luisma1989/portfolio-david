@@ -24,6 +24,10 @@ Container.displayName = 'Container';
 
 export const Title = styled(H2)`
   margin-bottom: ${rem('60px')};
+
+  @media (max-width: 1200px) {
+    margin-bottom: ${rem('20px')};
+  }
 `;
 Title.displayName = 'Title';
 
