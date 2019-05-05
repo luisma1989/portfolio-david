@@ -1,56 +1,17 @@
-import React from 'react'
-import { Parallax } from 'react-scroll-parallax'
-import { H1, Body } from 'components/Fonts'
-import Container from './styles'
-import image from './assets/david.png'
-import Responsive from 'react-responsive';
+import { connect } from 'react-redux'
+import Subheader from './Subheader'
+import { getSubheaderData } from 'reducers/subheader'
 
-const Desktop = props => <Responsive {...props} minWidth={992} />;
-const Mobile = props => <Responsive {...props} maxWidth={767} />;
-const Subheader = ({
-  subheaderData: {
-    title,
-    text,
+// Retrieve data from store as props
+const mapStateToProps = ({ intl, subheader }) => {
+  return {
+    intl,
+    subheader,
   }
-}) => {
-  return (
-    <Container className='subheader'>
-      <div className='container'>
-        <Desktop>
-          <Parallax
-            offsetYMax={170}
-            offsetYMin={0}
-            slowerScrollRate
-            tag='figure'
-          >
-            <div className='testimony'>
-              <H1>{title}</H1>
-              <Body>{text}</Body>
-            </div>
-          </Parallax>
-          <Parallax
-            offsetYMax={40}
-            offsetYMin={0}
-            slowerScrollRate
-            tag='figure'
-          >
-            <div className='image-subheader'>
-              <img src={image} alt='David' />
-            </div>
-          </Parallax>
-        </Desktop>
-        <Mobile>
-          <div className='testimony'>
-            <H1>{title}</H1>
-            <Body>{text}</Body>
-          </div>
-          <div className='image-subheader'>
-            <img src={image} alt='David' />
-          </div>
-        </Mobile>
-      </div>
-    </Container>
-  )
 }
 
-export default Subheader
+const mapDispatchToProps = {
+  getSubheaderData
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Subheader)

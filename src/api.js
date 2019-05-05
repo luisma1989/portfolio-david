@@ -17,3 +17,7 @@ const get = (params) => request('get', params)
 export const getHeader = () => get({
   url: '/api/header'
 })
+
+export const getSubheader = () => get({
+  url: '/api/subheader'
+})

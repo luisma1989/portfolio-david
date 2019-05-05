@@ -5,7 +5,7 @@ import createReducer from './create-reducer'
 export const getSubheaderData = () => (dispatch) => {
   dispatch({ type: GET_SUBHEADER_DATA.REQUEST})
 
-  api.getHeader()
+  api.getSubheader()
   .then((header) => {
     dispatch({ type: GET_SUBHEADER_DATA.SUCCESS })
     dispatch({

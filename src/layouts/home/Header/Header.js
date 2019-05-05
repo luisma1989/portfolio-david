@@ -11,12 +11,14 @@ import {
 } from './styles'
 
 const Header = ({ header, getHeaderData, intl }) => {
-  useEffect(async () => {
-    await getHeaderData()
-    new WOW.WOW().init()
-  }, [])
+  const getHeader = async () => await getHeaderData()
   const name = header.name || intl.messages.header.name
   const apellidos = header.apellidos || intl.messages.header.apellidos
+
+  useEffect(() => {
+    getHeader()
+    new WOW.WOW().init()
+  }, [])
 
   return (
     <Wrapper>

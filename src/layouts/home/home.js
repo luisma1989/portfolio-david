@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { HomePageElm } from './styles'
 import Header from './Header'
@@ -14,7 +14,7 @@ const Home = ({
   return (
     <HomePageElm>
       <Header />
-      <Subheader subheaderData={messages.subheader} />
+      <Subheader />
       <Countries countriesData={messages.countries} />
       <Social />
       <Experience experienceData={messages.experience} />
@@ -25,7 +25,6 @@ const Home = ({
 }
 Home.propTypes = {
   intl: PropTypes.object.isRequired,
-  getHeaderData: PropTypes.func.isRequired,
 }
 
 export default Home
