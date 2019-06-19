@@ -31,8 +31,8 @@ export const ItemList = styled.li`
     margin: 0 auto;
 
     @media (max-width: 1060px) {
-      width: 350px;
-      height: 50%;
+      width: 100%;
+      height: auto;
       max-width: 100%;
     }
 
